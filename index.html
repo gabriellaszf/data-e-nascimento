@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>My Little Pony - Fã Site do Caos</title>
+    <style>
+        body { font-family: 'Comic Sans MS', cursive; background-color: #ffe6f2; text-align: center; }
+        .caixa-caos { background: white; border: 5px dashed #ff66cc; padding: 20px; max-width: 500px; margin: 20px auto; border-radius: 20px; }
+        .slot-container { display: flex; justify-content: center; gap: 10px; margin: 20px 0; }
+        .slot { font-size: 30px; font-weight: bold; border: 2px solid #333; width: 80px; height: 50px; line-height: 50px; background: #eee; }
+        button { padding: 10px 20px; cursor: pointer; border-radius: 10px; border: none; font-weight: bold; }
+        #btn-girar { background-color: #ff3399; color: white; }
+        #btn-salvar { background-color: #33cc33; color: white; margin-top: 20px; display: none; }
+        .instrucao { font-size: 12px; color: #666; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>My Little Pony: Portal da Amizade</h1>
+    </header>
+
+    <main class="caixa-caos">
+        <h2>Tente a sorte para colocar sua data de nascimento!</h2>
+        <p class="instrucao">(Se errar, tente de novo. A sorte é um atributo de pônei!)</p>
+
+        <div class="slot-container">
+            <div id="slot-dia" class="slot">01</div>
+            <div id="slot-mes" class="slot">01</div>
+            <div id="slot-ano" class="slot">2024</div>
+        </div>
+
+        <button type="button" id="btn-girar">GIRAR ROLETA 🎰</button>
+        <br>
+        <button type="button" id="btn-salvar">SALVAR ESTA DATA ✅</button>
+
+        <div id="lista-salva" style="margin-top: 30px; text-align: left;">
+            <strong>Datas registradas no Banco:</strong>
+            <ul id="itens-lista"></ul>
+        </div>
+    </main>
+
+    <script src="db.js"></script>
+    <script src="controller.js"></script>
+</body>
+</html>
